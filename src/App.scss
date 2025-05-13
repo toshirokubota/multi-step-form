@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   display: flex;
@@ -13,6 +14,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
+  //text-align: center;
 }
 
 header {
@@ -30,7 +32,6 @@ header {
   aspect-ratio: 1;
   border-radius: 50%;
 }
-
 .circular-button.current {
   background-color: var(--color-blue-200);
   color: var(--color-blue-950);
@@ -45,25 +46,25 @@ header {
   padding: 1rem;
   background-color: var(--color-white);
   border-radius: 8px;
-}
-.form-card h1 {
-  color: var(--color-blue-950);
-  font-size: 1.5rem;
-}
-.form-card p {
-  color: var(--color-grey-500);
-  font-size: 1rem;
-}
-.form-card label {
-  color: var(--color-blue-950);
-  font-size: 0.75rem;
-}
-.form-card input {
-  width: 100%;
-  border: solid 1pt var(--color-grey-500);
-  border-radius: 4px;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
+  h1 {
+    color: var(--color-blue-950);
+    font-size: 1.5rem;
+  }
+  p {
+    color: var(--color-grey-500);
+    font-size: 1rem;
+  }
+  label {
+    color: var(--color-blue-950);
+    font-size: 0.75rem;
+  }
+  input {
+    width: 100%;
+    border: solid 1pt var(--color-grey-500);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
 }
 
 footer {
@@ -72,4 +73,4 @@ footer {
   display: flex;
   justify-content: space-between;
   background-color: var(--color-white);
-}/*# sourceMappingURL=App.css.map */
+}
