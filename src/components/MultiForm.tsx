@@ -5,16 +5,17 @@ import StepTwo from './StepTwo';
 import StepThree from './StepThree';
 import StepFour from './StepFour';
 import ThankYou from './ThankYou';
-import { FormObject, Addition } from '../types';
+import type { FormObject } from '../types';
 
 const defaultFormObject: FormObject = {
     name: '',
     email: '',
     phone: '',
-    plan: 'Arcade',
-    period: 'Monthly',
+    plan: undefined,
+    period: undefined,
     additions: [],
 }
+
 
 export default function MultiForm(): React.JSX.Element {
     const [step, setStep] = useState<number>(1);

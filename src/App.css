@@ -37,6 +37,13 @@ header {
   border: none;
 }
 
+.error-message {
+  display: block;
+  color: var(--color-red-500);
+  font-size: 12px;
+  text-align: left;
+}
+
 .form-card {
   position: relative;
   top: -5.5rem;
