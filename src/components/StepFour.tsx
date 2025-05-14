@@ -33,7 +33,7 @@ export default function StepFour(
             <Header step={step} setStep={setStep}/> 
             <form className="form-card">
                 <h1>Finishing up</h1>
-                <p>Double-check everything looks OK before confirming.</p>
+                <p className="my-4">Double-check everything looks OK before confirming.</p>
                 <div>
                     <span className='font-bold text-md'>{planOverview()}</span>
                     <span className='font-bold text-md'>{formObject.plan && priceString(formObject.plan, formObject.period)}</span>

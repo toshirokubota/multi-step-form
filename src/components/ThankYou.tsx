@@ -20,7 +20,7 @@ export default function StepOne(
         <div className="form-card">
             <img src={staticAsset('/assets/images/icon-thank-you.svg')} alt="thank you icon"/>
           <h1>Thank you!</h1>
-          <p>
+          <p className="my-4">
             Thanks for confirming your subscription! We hope you have fun using
             our platform. If you ever need support, please feel free to email us
             at support@loremgaming.com.

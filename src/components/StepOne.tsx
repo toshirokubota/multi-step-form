@@ -50,7 +50,7 @@ export default function StepOne(
             <Header step={step} setStep={setStep}/> 
             <form className="form-card">
                 <h1>Personal Info</h1>
-                <p>Please provide your name, email address, and phone number.</p>
+                <p className="my-4">Please provide your name, email address, and phone number.</p>
                 <div className='flex justify-between'>
                     <label htmlFor='your-name'>Name</label>
                     {errorFlag.get('name') && <span className='error-message'>{errorMessage.name}</span>}

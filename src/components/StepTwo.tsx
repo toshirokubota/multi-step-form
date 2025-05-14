@@ -49,12 +49,15 @@ export default function StepTwo(
             <Header step={step} setStep={setStep}/> 
             <form className="form-card">
                 <h1> Select your plan</h1>
-                <p>You have the option of monthly or yearly billing.</p>
-                <label htmlFor='plan-arcade'>
+                <p className="my-4">You have the option of monthly or yearly billing.</p>
+                {errorFlag.get('plan') && <span className='error-message'>{errorMessage.plan}</span>}
+                <label htmlFor='plan-arcade' className={'plan-label ' + `${formObject.plan == 'Arcade' ? 'checked': ''}`}>
                     <img src={staticAsset('/assets/images/icon-arcade.svg')} alt='Arcade logo'/>
-                    <span className='font-bold text-lg block'>Arcade</span>
-                    <span className='text-md block'>{priceString('Arcade', formObject.period)}</span>
-                    <span className='font-bold text-md block'>{formObject.period == 'Yearly' ? '2 months free' : ''}</span>
+                    <div className="plan-caption">
+                        <span className='font-bold text-lg block'>Arcade</span>
+                        <span className='text-md block'>{priceString('Arcade', formObject.period)}</span>
+                        <span className='font-bold text-md block'>{formObject.period == 'Yearly' ? '2 months free' : ''}</span>
+                    </div>
                     <input 
                         type="radio" 
                         id="plan-arcade" 
@@ -64,11 +67,13 @@ export default function StepTwo(
                         checked={formObject.plan == 'Arcade'}
                         />
                 </label>
-                <label htmlFor='plan-advanced'>
+                <label htmlFor='plan-advanced' className={'plan-label ' + `${formObject.plan == 'Advanced' ? 'checked': ''}`}>
                     <img src={staticAsset('/assets/images/icon-advanced.svg')} alt='Arcade logo'/>
-                    <span className='font-bold text-lg block'>Advanced</span>
-                    <span className='text-md block'>{priceString('Advanced', formObject.period)}</span>
-                    <span className='font-bold text-md block'>{formObject.period == 'Yearly' ? '2 months free' : ''}</span>
+                    <div className="plan-caption">
+                        <span className='font-bold text-lg block'>Advanced</span>
+                        <span className='text-md block'>{priceString('Advanced', formObject.period)}</span>
+                        <span className='font-bold text-md block'>{formObject.period == 'Yearly' ? '2 months free' : ''}</span>
+                    </div>
                     <input 
                         type="radio" 
                         id="plan-advanced" 
@@ -78,11 +83,13 @@ export default function StepTwo(
                         checked={formObject.plan == 'Advanced'}
                         />
                 </label>
-                <label htmlFor='plan-pro'>
+                <label htmlFor='plan-pro' className={'plan-label ' + `${formObject.plan == 'Pro' ? 'checked': ''}`}>
                     <img src={staticAsset('/assets/images/icon-pro.svg')} alt='Arcade logo'/>
-                    <span className='font-bold text-lg block'>Pro</span>
-                    <span className='text-md block'>{priceString('Pro', formObject.period)}</span>
-                    <span className='font-bold text-md block'>{formObject.period == 'Yearly' ? '2 months free' : ''}</span>
+                    <div className="plan-caption">
+                        <span className='font-bold text-lg block'>Pro</span>
+                        <span className='text-md block'>{priceString('Pro', formObject.period)}</span>
+                        <span className='font-bold text-md block'>{formObject.period == 'Yearly' ? '2 months free' : ''}</span>
+                    </div>
                     <input 
                         type="radio" 
                         id="plan-pro" 
@@ -92,10 +99,11 @@ export default function StepTwo(
                         checked={formObject.plan == 'Pro'}
                     />
                 </label>
-                {errorFlag.get('plan') && <span className='error-message'>{errorMessage.plan}</span>}
-
-                <label htmlFor='plan-monthly'>
-                    <span>Monthly</span>
+                {errorFlag.get('period') && <span className='error-message'>{errorMessage.period}</span>}
+                <div className="period-selector">
+                    <label htmlFor='plan-monthly' className={`${formObject.period == 'Monthly' ? 'checked': ''}`}>
+                        <span>Monthly</span>
+                    </label>
                     <input 
                         type="radio" 
                         id="plan-monthly" 
@@ -104,9 +112,9 @@ export default function StepTwo(
                         onChange={handleChange}
                         checked={formObject.period == 'Monthly'}
                         />
-                </label>
-                <label htmlFor='plan-yearly'>
-                    <span>Yearly</span>
+                    <span className="switch">
+                        <span className={'slider' + `${formObject.period == 'Monthly' ? 'left': 'right'}`} ></span>
+                    </span>
                     <input 
                         type="radio" 
                         id="plan-yearly" 
@@ -115,8 +123,11 @@ export default function StepTwo(
                         onChange={handleChange}
                         checked={formObject.period == 'Yearly'}
                     />
-                </label>
-                {errorFlag.get('period') && <span className='error-message'>{errorMessage.period}</span>}
+
+                    <label htmlFor='plan-yearly' className={`${formObject.period == 'Yearly' ? 'checked': ''}`}>
+                        <span>Yearly</span>
+                    </label>
+                </div>
             </form>
             <Footer step={step} setStep={setStep} error={Array.from(errorFlag.values()).some(a => a)}/>
         </>

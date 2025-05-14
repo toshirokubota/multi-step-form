@@ -46,11 +46,11 @@ export default function StepThree(
         <Header step={step} setStep={setStep} />
         <form className="form-card">
           <h1>Pick add-ons</h1>
-          <p>Add-ons help enhance your gaming experience.</p>
-          <label htmlFor="online-service">
-            <span className='font-bold text-lg block'>Online service</span>
-            <span className='text-sm block'>Access to multiplayer games</span>
-            <span className='text-sm text-blue-700 block'>{addonPriceString('Online Service', formObject.period) }</span>
+          <p className="my-4">Add-ons help enhance your gaming experience.</p>
+          <label htmlFor="online-service" className={"addon-label " + `${checked.get("Online Service") ? 'checked': ''}`}>
+            <span className='font-bold text-sm block addon-name'>Online service</span>
+            <span className='text-xs block addon-caption'>Access to multiplayer games</span>
+            <span className='text-xs text-blue-700 block addon-price'>{addonPriceString('Online Service', formObject.period) }</span>
             <input 
                 id="online-service" 
                 type="checkbox" 
@@ -59,10 +59,10 @@ export default function StepThree(
                 checked={checked.get("Online Service")}
                 />
           </label>
-          <label htmlFor="larger-storage">
-            <span className='font-bold text-lg block'>Larger storage</span>
-            <span className='text-sm block'>Extra 1TB of cloud save</span>
-            <span className='text-sm text-blue-700 block'>{addonPriceString('Extra Storage', formObject.period) }</span>
+          <label htmlFor="larger-storage" className={"addon-label " + `${checked.get("Extra Storage") ? 'checked': ''}`}>
+            <span className='font-bold text-sm block addon-name'>Larger storage</span>
+            <span className='text-xs block addon-caption'>Extra 1TB of cloud save</span>
+            <span className='text-xs text-blue-700 block addon-price'>{addonPriceString('Extra Storage', formObject.period) }</span>
             <input 
                 id="larger-storage" 
                 type="checkbox" 
@@ -71,10 +71,10 @@ export default function StepThree(
                 onChange={handleChange}
             />
           </label>
-          <label htmlFor="customizable-profile">
-            <span className='font-bold text-lg block'>Customizable Profile</span>
-            <span className='text-sm block'>Custom theme on your profile</span>
-            <span className='text-sm text-blue-700 block'>{addonPriceString('Customizable Profile', formObject.period) }</span>
+          <label htmlFor="customizable-profile" className={"addon-label " + `${checked.get("Customizable Profile") ? 'checked': ''}`}>
+            <span className='font-bold text-sm block addon-name'>Customizable Profile</span>
+            <span className='text-xs block addon-caption'>Custom theme on your profile</span>
+            <span className='text-xs text-blue-700 block addon-price'>{addonPriceString('Customizable Profile', formObject.period) }</span>
             <input 
                 id="customizable-profile" 
                 type="checkbox" 
