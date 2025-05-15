@@ -1,5 +1,5 @@
 import React, { useEffect, useState, type ChangeEvent } from 'react';
-import Header from './Header';
+//import Header from './Header';
 import Footer from './Footer';
 import type { Addition, FormObject } from '../types';
 import { addonPriceString } from '../libs';
@@ -43,7 +43,6 @@ export default function StepThree(
 
     return (
       <>
-        <Header step={step} setStep={setStep} />
         <form className="form-card">
           <h1>Pick add-ons</h1>
           <p className="my-4">Add-ons help enhance your gaming experience.</p>

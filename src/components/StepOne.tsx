@@ -1,5 +1,5 @@
 import React, { useState, type ChangeEvent } from 'react';
-import Header from './Header';
+//import Header from './Header';
 import Footer from './Footer';
 import type { FormObject } from '../types';
 import { formVaidator } from '../libs';
@@ -26,20 +26,20 @@ export default function StepOne(
     }
 
     const handleChange = (event: ChangeEvent)=> {
-        const name = (event.target as HTMLInputElement).name;
+        const name2 = (event.target as HTMLInputElement).name;
         const value = (event.target as HTMLInputElement).value;
-        setFormObject(obj => ({...obj, [name]:value}));
-        if(formVaidator(name, value)) {
+        setFormObject(obj => ({...obj, [name2]:value}));
+        console.log("Step One: handleChange error", name2, value, formVaidator(name2, value));
+        if(formVaidator(name2, value)) {
             setErrorFlag(prev => {
                 const newMap = new Map(prev);
-                newMap.set(name, false);
+                newMap.set(name2, false);
                 return newMap;
             });
         } else {
-            console.log("Step One: handleChange error", name, value)
             setErrorFlag(prev => {
                 const newMap = new Map(prev);
-                newMap.set(name, true);
+                newMap.set(name2, true);
                 return newMap;
             });
         }
@@ -47,8 +47,7 @@ export default function StepOne(
 
     return (
         <>
-            <Header step={step} setStep={setStep}/> 
-            <form className="form-card">
+            <form className="form-card personal-info">
                 <h1>Personal Info</h1>
                 <p className="my-4">Please provide your name, email address, and phone number.</p>
                 <div className='flex justify-between'>

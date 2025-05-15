@@ -16,6 +16,6 @@ export type FormObject = {
     email: string,
     phone: string,
     plan: PlanChoice | undefined,
-    period: PeriodOption | undefined,
+    period: PeriodOption,
     additions: Addition[],
 }
