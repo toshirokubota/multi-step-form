@@ -1,4 +1,4 @@
-import { formVaidator, planCost, addOnCost } from "../libs";
+import { formVaidator, planCost, addOnCost } from "../../libs";
 
 describe('formValidator', () => {
     it('returns an error with an empty input', () => {

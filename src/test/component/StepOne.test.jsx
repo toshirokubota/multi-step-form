@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import StepOne from '../components/StepOne';
+import StepOne from '../../components/StepOne';
 import { useState } from 'react';
 //import {FormObject} from '../types';
 

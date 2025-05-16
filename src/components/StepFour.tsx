@@ -23,7 +23,7 @@ export default function StepFour(
         for(let addon of formObject.additions) {
             cost += addOnCost(addon, formObject.period);
         }
-        return '+' + cost.toFixed(0) + '/' + (formObject.period == 'Monthly' ? 'mo' : 'yr');
+        return '+$' + cost.toFixed(0) + '/' + (formObject.period == 'Monthly' ? 'mo' : 'yr');
     }
 
     //console.log('Step 4:', formObject);

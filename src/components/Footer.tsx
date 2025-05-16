@@ -33,7 +33,7 @@ export default function Footer(
                     Go Back
                 </button>
                 <button 
-                    className='px-4 py-2 bg-blue-950 text-white rounded-sm'
+                    className={'px-4 py-2 text-white rounded-sm ' + `${step === 4 ? 'bg-blue-700': 'bg-blue-950'}` }
                     onClick={NextStep}
                 >
                     {step==4 ? "Confirm": "Next Step"}

@@ -11,8 +11,8 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "test:component": "vitest --run --dir ./src",
-    "test:e2e": "npx playwright test ./tests/e2e"
+    "test:component": "vitest --run --dir ./src/test/component",
+    "test:e2e": "npx playwright test ./src/test/e2e"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.6",

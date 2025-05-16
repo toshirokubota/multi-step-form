@@ -82,6 +82,7 @@ button:hover, button:focus {
   background-color: var(--color-white);
   padding: 1rem;
   border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(155, 155, 155, 0.5);
 }
 .form-card h1 {
   color: var(--color-blue-950);
@@ -272,6 +273,7 @@ footer {
     padding: 0rem;
     align-self: center;
     justify-self: center;
+    box-shadow: 0px 5px 15px rgba(155, 155, 155, 0.5);
   }
   header {
     background-image: url(/assets/images/bg-sidebar-desktop.svg);
@@ -308,6 +310,7 @@ footer {
     width: 100%;
     margin: 0;
     padding-top: 1rem;
+    box-shadow: none;
   }
   .personal-info > input {
     margin-bottom: 2rem;
